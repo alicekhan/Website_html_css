@@ -1,0 +1,190 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+body {
+  background: #0e1e37;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+/*navigation*/
+body ul {
+  display: flex;
+  overflow: hidden;  
+  justify-content: center;
+  align-items: center;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+ul li {
+  list-style: none;
+  margin: 0 20px;
+  transition: 0.5s;
+}
+ul li a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  padding: 5px;
+  font-size: 23px;
+  font-family: sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+ul:hover li a {
+  transform: scale(1.5);
+  opacity: .2;
+  filter: blur(5px);
+}
+ul li a:hover {
+  transform: scale(1.5);
+  opacity: 1;
+  filter: blur(0);
+}
+ul li a:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ff497c;
+  transition: transform 0.5s;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: -1;
+}
+ul li a:hover:before {  
+  transition:transform 0.5s;
+  transform-origin: left;
+  transform: scaleX(1);
+}
+/* nav bar end*/
+
+/*background animation */
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.bubbles {
+  position: relative;
+  display: flex;
+}
+.bubbles span{
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: #4fc3dc;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #4fc3dc44, 
+  0 0 50px #4fc3dc,
+  0 0 100px #4fc3dc;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(75s/ var(--i));
+}
+.bubbles span:nth-child(even){
+  
+  background: #ff2d75;
+  box-shadow: 0 0 0 10px #ff2d7544, 
+  0 0 50px #ff2d75,
+  0 0 100px #ff2d75;
+}
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
+/*background animation */
+
+/*welcome heading */
+.title{  
+  margin: 20%;
+  padding: 0;
+  display: inline-block;
+}
+.main{
+  font-size: 72px;
+  color: white;
+  text-transform: uppercase;   
+  letter-spacing: 10px;
+}
+body p {
+  height: 100vh;
+  background: #0e1e37;
+}
+.title p {
+  position: relative;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  font-size: 2em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #0e1e37, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animania 5s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, .01);
+}
+@keyframes animania {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+/*welcome heading end*/
+
+/*text animation*/
+body h2.text{
+  background: #0e1e37;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h2.text {
+  position: relative;
+  font-size: 6em;
+  letter-spacing: 9px;
+  word-spacing: 0px;
+  color: #0e3742;
+  text-transform: uppercase;
+  width: 98%;
+  text-align: center;
+  -webkit-box-reflect: below 1px linear-gradient(transparent,#0008);
+  line-height: 0.70em;
+  outline: none;
+  animation: anime 5s linear infinite;
+}
+@keyframes anime {
+  0%,18%,20%,50.1%,60%,65%,90.1%,92%
+  {
+    color: #0e3742;
+    box-shadow: none;
+  }
+  18.1%,20.1%,30%,50%,60.1%,65.1%,80.1%,90%,92.1%,100% {
+    color: #fff;
+    text-shadow: 0 0 10px #03bcf4,
+    0 0 20px #03bcf4,
+    0 0 40px #03bcf4,
+    0 0 80px #03bcf4,
+    0 0 160px #03bcf4;
+  }
+}
+/*text animation end*/
