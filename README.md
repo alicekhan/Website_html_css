@@ -1,2 +1,2 @@
 # Website_html_css
-Multi page website that contain Html CSS Only
+Multi page website that contain HTML CSS only
